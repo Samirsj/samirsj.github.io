@@ -1,6 +1,6 @@
 
 const sliderText = document.querySelector(".slider-content h1");
-const text = "Samir Es-safi";  
+const text = "Samir Es safi";  
 let index = 0;  
 
 
@@ -17,21 +17,32 @@ window.onload = () => {
 };
 
 
-const prevButton = document.querySelector('.prev-btn');
-const nextButton = document.querySelector('.next-btn');
-const slider = document.querySelector('.skill-slider');
-let slideIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".skill-slider");
+    const prevButton = document.querySelector(".prev-btn");
+    const nextButton = document.querySelector(".next-btn");
 
-prevButton.addEventListener('click', () => {
-    if (slideIndex > 0) {
-        slideIndex--;
-        slider.style.transform = `translateX(-${slideIndex * 25}%)`;
-    }
+    let scrollAmount = 0;
+    const step = 220; // Distance de défilement par clic (ajuste selon la taille des compétences)
+    const maxScroll = slider.scrollWidth - slider.parentElement.clientWidth; // Assure un défilement total
+
+    nextButton.addEventListener("click", function () {
+        if (scrollAmount < maxScroll) {
+            scrollAmount += step;
+            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+            slider.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+    });
+
+    prevButton.addEventListener("click", function () {
+        if (scrollAmount > 0) {
+            scrollAmount -= step;
+            if (scrollAmount < 0) scrollAmount = 0;
+            slider.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+    });
 });
 
-nextButton.addEventListener('click', () => {
-    if (slideIndex < 1) { 
-        slideIndex++;
-        slider.style.transform = `translateX(-${slideIndex * 25}%)`;
-    }
-});
+
+
+

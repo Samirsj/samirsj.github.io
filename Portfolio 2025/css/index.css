@@ -1,10 +1,13 @@
+/* ========================= */
+/*       GLOBAL STYLES       */
+/* ========================= */
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     background-color: #cccccc; 
 }
-
 
 .slider {
     position: relative;
@@ -51,22 +54,29 @@ p {
     line-height: 1.5em;
 }
 
-
 .section {
-    padding: 100px 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 50px 10%;
 }
 
 
 .flex {
     display: flex;
+    align-items: center; 
+    gap: 40px; 
 }
 
-.w40{
-    width: 40%;
+.w40 {
+    width: 30%; 
+    text-align: left; 
 }
 
-.w60{
-    width: 60%;
+
+.w60 {
+    width: 70%;
+    color: #efefef; 
 }
 
 .text-center{
@@ -80,6 +90,10 @@ p {
 .gap20{ 
     gap: 20px;
 }
+
+/* ========================= */
+/*         HEADER            */
+/* ========================= */
 
 header {
     position: fixed;
@@ -107,52 +121,67 @@ header {
     text-decoration: none;
     color: black;
     padding: 10px 20px;
+    border-radius: 10px; 
     display: block;
 }
 
 .header-menu li a:hover {
     background-color: #b1b1b1;
+    border-radius: 20px; 
+
 }
 
-.slider {
+/* ========================= */
+/*         COMPÉTENCES       */
+/* ========================= */
+
+.competence-container {
     position: relative;
-    height: 100vh; 
-    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    overflow: hidden; 
 }
 
+.slider-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+    width: 100%;
+}
 
 .skill-slider {
     display: flex;
-    gap: 100px; 
+    transition: transform 0.5s ease-in-out;
+    width: max-content; 
 }
-
 
 .skill {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    background-color: rgb(0, 0, 0); 
-    border-radius: 15px; 
-    padding: 20px; 
-    text-align: center; 
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
     width: 200px; 
-    height: auto; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 0 10px; 
 }
-
 
 .skill img {
-    width: 100px; 
-    height: auto;
-    margin-bottom: 10px; 
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
-
 .skill h3 {
-    color: rgb(204, 204, 204);
-    margin-top: 10px;
+    color: white;
+    font-size: 1rem;
 }
 
 .prev-btn, .next-btn {
@@ -162,77 +191,234 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 2em;
+    font-size: 2rem;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
     z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fond {
+    background-color: #bbbbbb; /* Fond sombre */
+    color: #ededed; /* Texte clair */
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* ========================= */
+/*          PARCOURS         */
+/* ========================= */
+
+.parcours {
+    background-color: #bbbbbb; /* Fond sombre */
+    color: #efefef; /* Texte clair */
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #0f0f0f;
+}
+
+
+.parcours-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.parcours-column {
+    width: 50%;
+    text-align: left;
+}
+
+.parcours-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #efefef;
 }
 
 
 .timeline {
-    width: 80%;
-    margin: 40px auto;
-    position: relative;
-    padding-left: 40px;
-    border-left: 3px solid #a1a1a1;
+    border-left: 2px solid #777777;
+    padding-left: 20px;
 }
 
 .timeline-item {
     position: relative;
-    margin: 20px 0;
+    margin-bottom: 25px;
 }
 
 .timeline-item::before {
-    content: '';
+    content: "●";
     position: absolute;
     left: -10px;
-    top: 10px;
-    width: 20px;
-    height: 20px;
-    background-color: #cccccc;
-    border: 3px solid #fff;
-    border-radius: 50%;
+    top: 0;
+    color: #0f0f0f;
+    font-size: 1.2rem;
 }
 
-.timeline-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.timeline-date {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 10px; 
 }
 
-.timeline-content h2 {
-    margin: 0 0 5px;
-    color: #000000;
+.timeline-title {
+    font-weight: bold;
+    color: #0f0f0f;
+    text-decoration: none;
 }
 
-.timeline-content p {
-    margin: 5px 0;
+.timeline-title:hover {
+    text-decoration: underline;
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .parcours-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .parcours-column {
+        width: 100%;
+    }
+}
+
+
+/* ========================= */
+/*        ÉPREUVE E4         */
+/* ========================= */
+
+.epreuve-e4 {
+    background-color: #cccccc; 
+    padding: 80px 10%;
+    text-align: center;
+}
+
+
+.epreuve-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.epreuve-text {
+    text-align: left;
+    width: 50%;
+}
+
+.epreuve-subtitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.epreuve-pdf {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.epreuve-pdf img {
+    width: 100%; 
+    max-width: 700px; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.epreuve-pdf iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .epreuve-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .epreuve-text, .epreuve-pdf {
+        width: 100%;
+    }
+
+    .epreuve-pdf iframe {
+        height: 400px;
+    }
+}
+
 
 .cv-container {
-    border: 3px solid #000; 
-    padding: 5px;
-    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacement entre les boutons */
+    margin: 50px auto;
     text-align: center;
-    margin: 100px auto; 
-    border-radius: 15px; 
-    background-color: #f4f4f4; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-.cv-container a {
+
+.cv-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
     text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+
+.cv-button.consult {
+    background-color: #cccccc;
     color: rgb(0, 0, 0);
-    margin: 25px;
+    border-color: black;
 }
 
-.cv-container a:hover {
-    background-color: #6e6c6c;
-    border-radius: 10px; 
-    color: #cccccc;
-    transition: all 0.2s ease;
+.cv-button.consult:hover {
+    background-color: #9c9c9c;
+    color: black;
 }
 
+
+.cv-button.download {
+    background-color: #2c2c2c;
+    color: white;
+    border-color: #141414;
+}
+
+.cv-button.download:hover {
+    background-color: #080808;
+    border-color: #191919;
+}
+
+/* ========================= */
+/*        FOOTER             */
+/* ========================= */
 
 .footer {
     background-color: #6e6c6c;
