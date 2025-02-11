@@ -1,3 +1,7 @@
+/* ========================= */
+/*       GLOBAL STYLES       */
+/* ========================= */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -7,66 +11,72 @@ body, html {
 
 .slider {
     position: relative;
-    height: 80vh; /* Hauteur pleine de la fenêtre */
+    height: 100vh; 
     overflow: hidden;
 }
 
 .slider-background {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Pour couvrir toute la zone sans déformer l'image */
+    object-fit: cover; 
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Placer l'image en arrière-plan */
-    filter:brightness(50%);
-    filter:blur(8px);
-    
+    z-index: 1; 
+    filter: brightness(50%) blur(8px);
 }
 
 .slider-content {
     position: relative;
-    z-index: 2; /* Placer le texte au-dessus de l'image */
-    color: rgb(207, 207, 207); /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
-    top: 45%; /* Positionner verticalement */
-    transform: translateY(-50%); /* Centrer verticalement */
-    
+    z-index: 2; 
+    color: rgb(207, 207, 207); 
+    text-align: center; 
+    top: 45%; 
+    transform: translateY(-50%); 
 }
+
+
+h1, h2, p {
+    margin: 10px 0 0; 
+}
+
 
 h1 {
-    font-size: 5em; /* Taille de la police pour le titre */
-    margin: 10px 0 0; /* Ajustez cette valeur pour contrôler l'espace au-dessus du paragraphe */
-
+    font-size: 5em; 
 }
 
-h2{
-    font-size : 3.5rem;
-    margin-bottom: 100px;
-    
+h2 {
+    font-size: 3.5rem;
 }
 
 p {
-    font-size: 1.5em; /* Taille de la police pour le paragraphe */
+    font-size: 1.5em; 
     line-height: 1.5em;
-    margin: 10px 0 0; /* Ajustez cette valeur pour contrôler l'espace au-dessus du paragraphe */
 }
 
-.section{
-    padding: 100px 0;
-}
-
-.flex{
+.section {
     display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 50px 10%;
 }
 
 
-.w40{
-    width: 40%;
+.flex {
+    display: flex;
+    align-items: center; 
+    gap: 40px; 
 }
 
-.w60{
-    width: 60%;
+.w40 {
+    width: 30%; 
+    text-align: left; 
+}
+
+
+.w60 {
+    width: 70%;
+    color: #efefef; 
 }
 
 .text-center{
@@ -81,22 +91,9 @@ p {
     gap: 20px;
 }
 
-.skill{
-    background-color: rgb(0, 0, 0);
-    border-radius: 15px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.skill img{
-    width: 100px;
-
-}
-
-.skill h3{
-    color: rgb(255, 255, 255);
-    margin-top: 10px;
-}
+/* ========================= */
+/*         HEADER            */
+/* ========================= */
 
 header {
     position: fixed;
@@ -108,83 +105,41 @@ header {
     padding-block: 10px;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: center; /* Centre le menu horizontalement */
+    justify-content: center; 
 }
 
 .header-menu {
     display: flex;
-    align-items: center;
     list-style: none;
-    justify-content: center; /* Assure que les éléments sont centrés */
 }
 
 .header-menu li {
-    margin: 0 10px; /* Ajoute de l'espace entre les éléments de la liste */
+    margin: 0 10px; 
 }
 
 .header-menu li a {
     text-decoration: none;
     color: black;
     padding: 10px 20px;
+    border-radius: 10px; 
     display: block;
-    box-sizing: border-box;
 }
 
 .header-menu li a:hover {
     background-color: #b1b1b1;
+    border-radius: 20px; 
+
 }
 
 
-.contact-form-container {
-    display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    height: 100vh; /* La hauteur du conteneur prend toute la hauteur de la page */
-}
-
-.contact-form {
-    background-color: #f4f4f4; /* Une couleur de fond pour ton formulaire */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    width: 100%;
-    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
-}
-
-.contact-form h2 {
-    text-align: center; /* Centrer le titre du formulaire */
-    margin-bottom: 20px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #555;
-}
-
+/* ========================= */
+/*        FOOTER             */
+/* ========================= */
 
 .footer {
     background-color: #6e6c6c;
     color: white;
-    width: 100%; /* Utilisation de 100% au lieu de 100vw */
+    width: 100%; 
     padding: 10px 50px;
     display: flex;
     justify-content: space-between;
@@ -192,61 +147,87 @@ header {
     position: relative;
     bottom: 0;
     left: 0;
-    margin: 0; /* Supprime les marges */
-    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
-  }
-  
-  .copyright {
-    font-size: 0.9em;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     display: flex;
     gap: 15px;
-  }
-  
-  .social-icons .icon {
-    padding: 10px;
-    display: inline-block;
-    
-  }
-  
-  .social-icons .icon img {
+}
+
+.social-icons .icon img {
     width: 20px;
     height: 20px;
-  }
+}
 
 
+/* ========================= */
+/*      SECTION CONTACT      */
+/* ========================= */
 
+.contact-section {
+    max-width: 1200px;
+    margin: 120px auto 50px auto;
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
 
+.contact-section h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
+.contact-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
 
+/* Conteneur principal */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
 
+/* ========================= */
+/*    INFORMATIONS CONTACT   */
+/* ========================= */
 
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: left;
+}
 
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
 
+.info-item i {
+    font-size: 26px;
+    color: #1abc9c;
+}
 
+.contact-info h2 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
 
+/* Carte Google Maps */
+.map-container iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
- 
