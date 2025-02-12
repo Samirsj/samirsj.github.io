@@ -77,6 +77,8 @@ p {
 .w60 {
     width: 70%;
     color: #efefef; 
+    font-size: 1em; 
+    font-weight: bold; 
 }
 
 .text-center{

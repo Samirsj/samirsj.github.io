@@ -167,9 +167,7 @@ header {
 .contact-section {
     max-width: 1200px;
     margin: 50px auto;
-    padding: 40px;
-    background: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     border-radius: 15px;
     text-align: center;
 }
@@ -189,7 +187,7 @@ header {
 .contact-info {
     flex: 1;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #ecf0f1;
     border-radius: 10px;
     text-align: left;
 }
@@ -203,14 +201,15 @@ header {
 
 .info-item i {
     font-size: 26px;
-    color: #1abc9c;
+    color: #000000;
 }
 
 .contact-info h2 {
-    color: #2c3e50;
+    color: #929292;
     font-size: 1.3rem;
     margin-bottom: 5px;
 }
+
 
 .map-container iframe {
     width: 100%;
@@ -227,13 +226,14 @@ header {
     flex: 1;
     padding: 100px;
     background: #ecf0f1;
-    border-radius: 10px;
+    border-radius: 9px;
     text-align: left;
 }
 
 .contact-form h2 {
-    color: #2c3e50;
-    font-size: 1.8rem;
+    font-size: 1.7rem; 
+    text-align: center; 
+    width: 100%; 
     margin-bottom: 20px;
 }
 
@@ -261,9 +261,9 @@ header {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #1abc9c;
+    border-color: #000000;
     outline: none;
-    box-shadow: 0px 0px 5px rgba(26, 188, 156, 0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 button {
