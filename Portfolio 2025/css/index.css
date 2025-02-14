@@ -1,12 +1,12 @@
 /* ========================= */
 /*       GLOBAL STYLES       */
 /* ========================= */
-body, html {
+html, body {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
-    height: 100%;
+    width: 100%;
     background-color: #cccccc; 
-    overflow-x: hidden; /* Empêche le débordement horizontal */
 }
 
 h1 {
@@ -30,18 +30,13 @@ p {
     padding: 50px 10%;
 }
 
-.boxed {
-    width: 100%;
-    max-width: 1200px; /* Ajuste selon ton design */
-    margin: 0 auto; /* Centre le contenu */
-}
 
 .flex {
     display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 40px;
+    align-items: center; 
+    gap: 40px; 
 }
+
 
 .w40 {
     width: 50%; 
@@ -72,15 +67,17 @@ p {
 
 header {
     position: fixed;
+    font-size: 1.2rem;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw; /* Assure que le header prend toute la largeur de l'écran */
     background-color: rgb(204, 204, 204);
     z-index: 999;
     padding-block: 10px;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center; 
+    overflow-x: hidden; /* Empêche tout débordement horizontal */
 }
 
 .header-menu {

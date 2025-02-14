@@ -4,9 +4,9 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    width: 100%;
     background-color: #cccccc; 
-    overflow-x: hidden; /* Empêche le débordement horizontal */
+    overflow-x: hidden;
 }
 
 h1 {
@@ -31,14 +31,16 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw; /* Assure que le header prend toute la largeur de l'écran */
     background-color: rgb(204, 204, 204);
     z-index: 999;
     padding-block: 10px;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center; 
+    overflow-x: hidden; /* Empêche tout débordement horizontal */
 }
+
 
 .header-menu {
     display: flex;
@@ -62,6 +64,7 @@ header {
     border-radius: 20px; 
 
 }
+
 
 /* ========================= */
 /*         SLIDER            */
@@ -96,7 +99,7 @@ header {
 }
 
 .slider-content h1 {
-    margin-bottom: 5px; /* Réduit l'espace en dessous du titre */
+    margin-bottom: 5px; 
 }
 
 .slider-content p {
@@ -255,7 +258,6 @@ header {
     margin-top: 5px; /* Réduit l'espace entre les boutons et le message */
     width: 100%;
 }
-
 
 
 /* ======================= */

@@ -12,16 +12,15 @@
 <body>
 
     <header>
-        <div class = "boxed">
-            <div class = "flex">
-                <ul class = "header-menu">
-                    <li><a href="index.html"> ACCEUIL</a></li>
-                    <li><a href="Bts_sio.html"> BTS SIO</a></li>
-                    <li><a href="Staage.html"> STAGES </a></li>
-                    <li><a href="Projet.html"> PROJETS</a></li>
-                    <li><a href="Contact.html"> CONTACT</a></li>
-                </ul>
-            </div>
+
+        <div class = "flex">
+            <ul class = "header-menu">
+                <li><a href="index.html"> ACCUEIL</a></li>
+                <li><a href="Bts_sio.html"> BTS SIO</a></li>
+                <li><a href="Staage.html"> STAGES</a></li>
+                <li><a href="Projet.html"> PROJETS</a></li>
+                <li><a href="Contact.html"> CONTACT</a></li>
+            </ul>
         </div>
 
     </header>
@@ -82,12 +81,23 @@
                 <div class="project-title">Projet Personnel</div>
                 <div class="project-description">Gestion de personnel d'une organisation.</div>
                 <div class="project-info">
-                    <a href="Projet_personnel.html" class="more-info-button">En savoir plus</a>
+                    <a href="./Projet_personnel.html" class="more-info-button">En savoir plus</a>
                 </div>
             </div>
         </div>
 
-         <!-- Message affiché lorsqu'aucun projet ne correspond au filtre -->
+        <div class="project-box" data-category="personnel">
+            <span class="category-badge">JAVASCRIPT</span>
+            <img src="./Portfolio 2025/img/morpionimg.webp" alt="Projet Linux">
+            <div class="project-content">
+                <div class="project-title">Projet Morpion</div>
+                <div class="project-description">Morpion est un jeu de Tic-Tac-Toe en trois manches où deux joueurs s'affrontent pour la victoire.</div>
+                <div class="project-info">
+                    <a href="./Projet_Morpion.html" class="more-info-button">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+
          <p id="no-project-message" class="hidden">
             Aucun projet ne correspond à cette catégorie pour le moment.
         </p>

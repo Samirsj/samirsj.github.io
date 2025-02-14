@@ -1,46 +1,20 @@
+/* ======================= */
+/*       GLOBAL STYLES    */
+/* ======================= */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #cccccc; 
-}
-
-.slider {
-    position: relative;
-    height: 80vh; /* Hauteur pleine de la fenêtre */
-    overflow: hidden;
-}
-
-.slider-background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Pour couvrir toute la zone sans déformer l'image */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Placer l'image en arrière-plan */
-    filter:brightness(50%);
-    filter:blur(8px);
-    
-}
-
-.slider-content {
-    position: relative;
-    z-index: 2; /* Placer le texte au-dessus de l'image */
-    color: rgb(207, 207, 207); /* Couleur du texte */
-    text-align: center; /* Centrer le texte */
-    top: 45%; /* Positionner verticalement */
-    transform: translateY(-50%); /* Centrer verticalement */
-    
+    background-color: #cccccc;
 }
 
 h1 {
-    font-size: 5em; /* Taille de la police pour le titre */
-    margin: 10px 0 0; /* Ajustez cette valeur pour contrôler l'espace au-dessus du paragraphe */
+    font-size: 5em;
+    margin: 10px 0 0;
 }
 
-h2{
-    font-size : 3.5rem;
+h2 {
+    font-size: 3.5rem;
     margin-bottom: 100px;
 }
 
@@ -48,165 +22,203 @@ h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
-  
 
 p {
-    font-size: 1.3em; /* Taille de la police pour le paragraphe */
+    font-size: 1.3em;
     line-height: 1.3em;
-    margin: 10px 0 0; /* Ajustez cette valeur pour contrôler l'espace au-dessus du paragraphe */
+    margin: 10px 0 0;
 }
 
-.section{
+.section {
     padding: 100px 0;
 }
 
-.boxed{
+.boxed {
     max-width: 1280px;
     margin-inline: auto;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.w25{
+.w25 {
     width: 25%;
 }
 
-.gap20{ 
+.gap20 {
     gap: 20px;
 }
 
-.skill{
-    background-color: rgb(0, 0, 0);
-    border-radius: 15px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.skill img{
-    width: 100px;
-
-}
-
-.skill h3{
-    color: rgb(255, 255, 255);
-    margin-top: 10px;
-}
-
+/* ======================= */
+/*         HEADER          */
+/* ======================= */
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: rgb(204, 204, 204);
     z-index: 999;
     padding-block: 10px;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: center; /* Centre le menu horizontalement */
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 .header-menu {
     display: flex;
-    align-items: center;
     list-style: none;
-    justify-content: center; /* Assure que les éléments sont centrés */
 }
 
 .header-menu li {
-    margin: 0 10px; /* Ajoute de l'espace entre les éléments de la liste */
+    margin: 0 10px;
 }
 
 .header-menu li a {
     text-decoration: none;
     color: black;
     padding: 10px 20px;
+    border-radius: 10px;
     display: block;
-    box-sizing: border-box;
 }
 
 .header-menu li a:hover {
     background-color: #b1b1b1;
+    border-radius: 20px;
+}
+
+/* ========================= */
+/*         SLIDER            */
+/* ========================= */
+
+.slider {
+    position: relative;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.slider-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    filter:brightness(50%);
+    filter:blur(8px);
+}
+
+.slider-content {
+    margin-bottom: 5px; 
+    position: relative;
+    z-index: 2; 
+    color: rgb(207, 207, 207); 
+    text-align: center; 
+    top: 45%; 
+    transform: translateY(-50%); 
+}
+
+.slider-content h1 {
+    margin-bottom: 5px; 
+}
+
+.slider-content p {
+    margin-top: 0px; 
+    font-size: 1.2em; 
 }
 
 
 
+/* ======================= */
+/*       COMPETENCES       */
+/* ======================= */
+.skill {
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.skill img {
+    width: 100px;
+}
+
+.skill h3 {
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+/* ======================= */
+/*      OPTIONS BTS        */
+/* ======================= */
 .options-bts {
     display: flex;
     justify-content: space-between;
     gap: 50px;
     margin: 100px;
-  }
-  
-  .option {
+}
+
+.option {
     border: 3px solid rgb(0, 0, 0);
     padding: 35px;
-    width: 100%; /* Ajuste la largeur si nécessaire */
+    width: 100%;
     box-sizing: border-box;
-  }
+}
 
-
-  .option-content {
+.option-content {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrer horizontalement l'image et le texte */
+    justify-content: center;
 }
 
 .small-img {
-    width: 30px; /* Ajuster la taille de l'image */
+    width: 30px;
     height: auto;
-    margin-right: 10px; /* Espacement entre l'image et le texte */
+    margin-right: 10px;
 }
 
-h3 {
-    margin: 0;
-}
-
-
-  
-  .footer {
+/* ======================= */
+/*        FOOTER           */
+/* ======================= */
+.footer {
     background-color: #6e6c6c;
     color: white;
-    width: 100%; /* Utilisation de 100% au lieu de 100vw */
-    padding: 10px 50px;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer .copyright {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer .social-icons {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    margin: 0; /* Supprime les marges */
-    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
-  }
- 
-  
-  .copyright {
-    font-size: 0.9em;
-  }
-  
-  .social-icons {
-    display: flex;
+    justify-content: center;
     gap: 15px;
-  }
-  
-  .social-icons .icon {
-    padding: 10px;
+}
+
+.footer .social-icons .icon {
     display: inline-block;
-    
-  }
-  
-  .social-icons .icon img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  
-  
-  
- 
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .social-icons .icon img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+    filter: grayscale(50%);
+}
+
+.footer .social-icons .icon:hover img {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
