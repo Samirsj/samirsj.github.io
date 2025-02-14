@@ -30,11 +30,17 @@ p {
     padding: 50px 10%;
 }
 
+.boxed {
+    width: 100%;
+    max-width: 1200px; /* Ajuste selon ton design */
+    margin: 0 auto; /* Centre le contenu */
+}
 
 .flex {
     display: flex;
-    align-items: center; 
-    gap: 40px; 
+    justify-content: center; 
+    align-items: center;
+    gap: 40px;
 }
 
 .w40 {
@@ -51,14 +57,6 @@ p {
 
 .text-center{
     text-align: center;
-}
-
-.w25{
-    width: 25%;
-}
-
-.gap20{ 
-    gap: 20px;
 }
 
 .fond {
@@ -227,26 +225,6 @@ header {
 
 .prev-btn:hover, .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-@media (max-width: 768px) {
-    .skill {
-        width: 120px;  
-        height: 120px;
-    }
-
-    .skill img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .skill h3 {
-        font-size: 0.8rem;
-    }
-
-    .prev-btn, .next-btn {
-        font-size: 1.5rem; 
-    }
 }
 
 
@@ -432,23 +410,6 @@ header {
     transform: scale(1.05);
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .epreuve-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .epreuve-text, .epreuve-pdf {
-        width: 100%;
-    }
-
-    .epreuve-pdf iframe {
-        height: 400px;
-    }
-}
-
-
 .cv-container {
     display: flex;
     justify-content: center;
@@ -534,18 +495,3 @@ header {
     filter: grayscale(0%);  
 }
 
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .footer .social-icons {
-        justify-content: center;
-    }
-
-    .footer .social-icons .icon img {
-        width: 28px; 
-    }
-}
