@@ -44,5 +44,58 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".project-box");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Supprime la classe "active" de tous les boutons
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            projects.forEach(project => {
+                if (filterValue === "all" || project.getAttribute("data-category") === filterValue) {
+                    project.style.display = "flex"; // Affiche les projets correspondants
+                } else {
+                    project.style.display = "none"; // Cache les autres
+                }
+            });
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectBoxes = document.querySelectorAll(".project-box");
+    const noProjectMessage = document.getElementById("no-project-message");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
+
+            let visibleProjects = 0;
+
+            projectBoxes.forEach(box => {
+                if (filter === "all" || box.getAttribute("data-category") === filter) {
+                    box.style.display = "block";
+                    visibleProjects++;
+                } else {
+                    box.style.display = "none";
+                }
+            });
+
+            // Affiche le message si aucun projet n'est visible
+            noProjectMessage.style.display = (visibleProjects === 0) ? "block" : "none";
+
+            // Supprime la classe "active" des boutons et l'ajoute au bouton cliqué
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+});
 
 

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samir Essafi - Projets</title>
-    
     <link rel="stylesheet" href="./Portfolio 2025/css/Projet.css">
+
 
 </head>
 
@@ -17,7 +17,7 @@
                 <ul class = "header-menu">
                     <li><a href="index.html"> ACCEUIL</a></li>
                     <li><a href="Bts_sio.html"> BTS SIO</a></li>
-                    <li><a href="Staage.html"> EPREUVE E4 </a></li>
+                    <li><a href="Staage.html"> STAGES </a></li>
                     <li><a href="Projet.html"> PROJETS</a></li>
                     <li><a href="Contact.html"> CONTACT</a></li>
                 </ul>
@@ -33,20 +33,72 @@
         </div>
     </div>
 
+        <!-- Section d'introduction -->
+        <section class="project-intro">
+            <div class="container">
+                <p>
+                    Ici, je vous présente les différentes réalisations que j'ai pu développer au cours de ma <strong>formation</strong>, 
+                    de mes <strong>expériences professionnelles</strong> et de mes <strong>projets personnels</strong>.
+                </p>
+                <p>
+                    Chaque projet illustre mes compétences en <strong>développement</strong>, en <strong>gestion de systèmes informatiques</strong> 
+                    et en <strong>résolution de problèmes techniques</strong>.
+                </p>
+                <p>
+                    Vous pouvez filtrer mes projets en fonction de leur type grâce au menu ci-dessous :
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Sommaire / Filtrage -->
+    <div class="project-filter">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="formation">Formation</button>
+        <button class="filter-btn" data-filter="personnel">Personnel</button>
+        <button class="filter-btn" data-filter="professionnel">Professionnel</button>
+    </div>
+
+    <br>
+
     <main class="projects-container">
-        <div class="project-box">
-            <img src="./Portfolio 2025/img/PROJET.png" alt="Image du projet Parking" class="project-image">
-            <div class="project-overlay">
+
+        <div class="project-box" data-category="formation">
+            <span class="category-badge">PHP</span>
+            <img src="./Portfolio 2025/img/parking.jpg" alt="Projet Linux">
+            <div class="project-content">
+                <div class="project-title">Projet Parking</div>
+                <div class="project-description">Comment fonctionne l'arborescence de Linux ?</div>
                 <div class="project-info">
-                    <a href="Projet 1.html" class="more-info-button">En savoir plus</a>
+                    <a href="Projet_formation.html" class="more-info-button">En savoir plus</a>
                 </div>
             </div>
         </div>
+
+        <div class="project-box" data-category="formation">
+            <span class="category-badge">JAVA</span>
+            <img src="./Portfolio 2025/img/PROJET.png" alt="Projet Personnel">
+            <div class="project-content">
+                <div class="project-title">Projet Personnel</div>
+                <div class="project-description">Gestion de personnel d'une organisation.</div>
+                <div class="project-info">
+                    <a href="Projet_personnel.html" class="more-info-button">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+
+         <!-- Message affiché lorsqu'aucun projet ne correspond au filtre -->
+         <p id="no-project-message" class="hidden">
+            Aucun projet ne correspond à cette catégorie pour le moment.
+        </p>
+        
     </main>
+
+       
 
     <footer class="footer">
         <div class="copyright">
-            © Samir Essafi 2024
+            © Samir Es safi 2025
         </div>
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/samir-essafi-0a56432b7/" class="icon" target="_blank" rel="noopener noreferrer">
@@ -57,6 +109,7 @@
             </a>
         </div>
     </footer>
+
 
     <script src="./Portfolio 2025/js/app.js"></script>
 </body>
