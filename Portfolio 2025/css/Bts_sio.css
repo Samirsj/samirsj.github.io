@@ -1,11 +1,12 @@
 /* ======================= */
 /*       GLOBAL STYLES    */
 /* ======================= */
-body, html {
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #cccccc; 
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-color: #cccccc;
 }
 
 h1 {
@@ -54,43 +55,47 @@ p {
     gap: 20px;
 }
 
-/* ======================= */
-/*         HEADER          */
-/* ======================= */
+/* ========================= */
+/*         HEADER            */
+/* ========================= */
+
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background-color: rgb(204, 204, 204);
-    z-index: 999;
-    padding-block: 10px;
-    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    background-color: rgb(204, 204, 204); 
+    z-index: 999; 
+    padding-block: 8px; 
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 60px; 
+    overflow-x: hidden; 
 }
 
 .header-menu {
-    display: flex;
-    list-style: none;
+    display: flex; 
+    list-style: none; 
 }
 
 .header-menu li {
-    margin: 0 10px;
+    margin: 0 10px; 
 }
 
 .header-menu li a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: block;
+    text-decoration: none; 
+    color: black; 
+    padding: 8px 18px; 
+    border-radius: 10px; 
+    display: block; 
+    font-size: 1rem; 
 }
 
 .header-menu li a:hover {
-    background-color: #b1b1b1;
-    border-radius: 20px;
+    background-color: #b1b1b1; 
+    border-radius: 30px; 
 }
 
 /* ========================= */
@@ -170,6 +175,7 @@ header {
     padding: 35px;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .option-content {
@@ -178,6 +184,25 @@ header {
     justify-content: center;
 }
 
+.small-img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.option h3 {
+    text-align: center;
+}
+
+.option p {
+    text-align: left;
+}
+
+.option ul {
+    text-align: left;
+    padding-left: 40px;
+    list-style-position: outside;
+}
 .small-img {
     width: 30px;
     height: auto;
