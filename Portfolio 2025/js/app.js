@@ -1,4 +1,3 @@
-
 const sliderText = document.querySelector(".slider-content h1");
 const text = "Samir Es safi";  
 let index = 0;  
@@ -98,4 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Animation du header au scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
 
