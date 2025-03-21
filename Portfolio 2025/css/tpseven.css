@@ -1,0 +1,250 @@
+/* ======================= */
+/*       GLOBAL STYLES    */
+/* ======================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #cccccc; 
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    position: relative;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.slider-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    filter:brightness(50%);
+    filter:blur(8px);
+    
+}
+
+.slider-content {
+    position: relative;
+    z-index: 2; 
+    color: rgb(207, 207, 207); 
+    text-align: center; 
+    top: 45%; 
+    transform: translateY(-50%); 
+    
+}
+
+h1 {
+    font-size: 5em; 
+    margin: 10px 0 0; 
+
+}
+
+h2{
+    font-size : 3.5rem;
+    margin-bottom: 100px;
+    
+}
+
+p {
+    font-size: 1.5em; 
+    line-height: 1.5em;
+    margin: 10px 0 0; 
+}
+
+.section{
+    padding: 100px 0;
+}
+
+.boxed{
+    max-width: 1280px;
+    margin-inline: auto;
+    
+}
+
+.flex{
+    display: flex;
+}
+
+
+.w40{
+    width: 40%;
+}
+
+.w60{
+    width: 60%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* ======================= */
+/*         HEADER          */
+/* ======================= */
+header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    background-color: rgb(204, 204, 204); 
+    z-index: 999; 
+    padding-block: 8px; 
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 60px; 
+    overflow-x: hidden; 
+}
+
+.header-menu {
+    display: flex; 
+    list-style: none; 
+}
+
+.header-menu li {
+    margin: 0 10px; 
+}
+
+.header-menu li a {
+    text-decoration: none; 
+    color: black; 
+    padding: 8px 18px; 
+    border-radius: 10px; 
+    display: block; 
+    font-size: 1rem; 
+}
+
+.header-menu li a:hover {
+    background-color: #b1b1b1; 
+    border-radius: 30px; 
+}
+
+/* ========================= */
+/*         SLIDER            */
+/* ========================= */
+
+.slider {
+    position: relative;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.slider-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    filter:brightness(50%);
+    filter:blur(8px);
+}
+
+.slider-content {
+    margin-bottom: 5px; 
+    position: relative;
+    z-index: 2; 
+    color: rgb(207, 207, 207); 
+    text-align: center; 
+    top: 45%; 
+    transform: translateY(-50%); 
+}
+
+.slider-content h1 {
+    margin-bottom: 5px; 
+}
+
+.slider-content p {
+    margin-top: 0px; 
+    font-size: 1.2em; 
+}
+
+
+
+.links {
+    margin-top: 20px;
+    text-align: center; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #000000; 
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    margin: 10px 50px; 
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: #303030; 
+    transform: translateY(-3px); 
+}
+
+.btn:active {
+    transform: translateY(1px); 
+}
+
+.btn:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); 
+}
+
+
+@media (max-width: 768px) {
+    .btn {
+        width: 90%; 
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ======================= */
+/*        FOOTER           */
+/* ======================= */
+
+.footer {
+    background-color: #6e6c6c;  
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer .copyright {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer .social-icons .icon {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .social-icons .icon img {
+    width: 30px;  
+    transition: transform 0.3s ease-in-out;
+    filter: grayscale(50%); 
+}
+
+.footer .social-icons .icon:hover img {
+    transform: scale(1.2);  
+    filter: grayscale(0%);  
+}
